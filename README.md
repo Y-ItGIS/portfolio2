@@ -17,7 +17,7 @@ GIS and cartographic portfolio website showcasing ArcGIS Pro, ArcPy, Adobe Creat
 
 Visit the live portfolio:
 
-[Wyatt Harryman GIS & Cartographic Portfolio]()
+[Wyatt Harryman GIS & Cartographic Portfolio](https://y-itgis.github.io/portfolio2/)
 
 ## Featured Work
 
