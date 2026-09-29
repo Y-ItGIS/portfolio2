@@ -21,10 +21,10 @@ Visit the live portfolio:
 
 ## Featured Work
 
-Horse of Kentucky
-The Kentucky Iron Industry
-Energy Use in the United States
-An Oblique View of the Santorini Caldera
+- Horse of Kentucky
+- The Kentucky Iron Industry
+- Energy Use in the United States
+- An Oblique View of the Santorini Caldera
 
 ## Education
 
