@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Wyatt Harryman | GIS & Cartography</title>
+
+    <meta name="description"
+          content="Wyatt Harryman's GIS, cartography, spatial visualization, and geographic design portfolio.">
+
+    <style>
+        /* =========================================================
+           GENERAL
+        ========================================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f5f5f3;
+            color: #202020;
+            line-height: 1.6;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1200px, 92%);
+            margin: auto;
+        }
+
+        /* =========================================================
+           NAVIGATION
+        ========================================================= */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(245, 245, 243, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #d8d8d4;
+        }
+
+        .nav-container {
+            width: min(1200px, 92%);
+            margin: auto;
+            height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+            font-size: 0.9rem;
+        }
+
+        .nav-links a {
+            color: #555;
+            transition: color 0.2s ease;
+        }
+
+        .nav-links a:hover {
+            color: #111;
+        }
+
+        /* =========================================================
+           HERO
+        ========================================================= */
+
+        .hero {
+            min-height: 88vh;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #d8d8d4;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.15fr 0.85fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .eyebrow {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            color: #777;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3.4rem, 8vw, 7rem);
+            line-height: 0.92;
+            letter-spacing: -0.06em;
+            margin-bottom: 28px;
+        }
+
+        .hero h2 {
+            font-size: clamp(1.2rem, 2vw, 1.7rem);
+            font-weight: 400;
+            color: #555;
+            margin-bottom: 25px;
+        }
+
+        .hero-description {
+            max-width: 620px;
+            color: #666;
+            font-size: 1.05rem;
+            margin-bottom: 35px;
+        }
+
+        .button-row {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 13px 22px;
+            border: 1px solid #202020;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .button.primary {
+            background: #202020;
+            color: white;
+        }
+
+        .button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* HERO FEATURE IMAGE */
+
+        .hero-image {
+            aspect-ratio: 4 / 5;
+            background: #deded9;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .hero-image-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 30px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* =========================================================
+           SECTION
+        ========================================================= */
+
+        section {
+            padding: 110px 0;
+            border-bottom: 1px solid #d8d8d4;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 30px;
+            margin-bottom: 55px;
+        }
+
+        .section-number {
+            font-size: 0.75rem;
+            color: #888;
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            line-height: 1;
+            letter-spacing: -0.04em;
+        }
+
+        .section-description {
+            max-width: 450px;
+            color: #666;
+        }
+
+        /* =========================================================
+           FEATURED PROJECTS
+        ========================================================= */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 50px 30px;
+        }
+
+        .project {
+            cursor: pointer;
+        }
+
+        .project-image {
+            aspect-ratio: 16 / 10;
+            background: #ddd;
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project:hover .project-image img {
+            transform: scale(1.03);
+        }
+
+        .project-number {
+            font-size: 0.75rem;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .project h3 {
+            font-size: 1.5rem;
+            margin-bottom: 7px;
+        }
+
+        .project p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 12px;
+        }
+
+        .tag {
+            border: 1px solid #cfcfca;
+            padding: 4px 9px;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #666;
+        }
+
+        /* =========================================================
+           PROJECT DETAIL
+        ========================================================= */
+
+        .project-detail {
+            margin-top: 100px;
+            padding-top: 100px;
+            border-top: 1px solid #d8d8d4;
+        }
+
+        .project-detail-grid {
+            display: grid;
+            grid-template-columns: 0.75fr 1.25fr;
+            gap: 60px;
+            align-items: start;
+        }
+
+        .project-detail h3 {
+            font-size: 2.4rem;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+        .project-detail p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .project-info {
+            display: grid;
+            gap: 20px;
+        }
+
+        .info-block strong {
+            display: block;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 5px;
+        }
+
+        .info-block span {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .workflow {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 25px;
+        }
+
+        .workflow-step {
+            padding: 10px 13px;
+            border: 1px solid #ccc;
+            font-size: 0.75rem;
+            background: #fafaf8;
+        }
+
+        .workflow-arrow {
+            color: #999;
+        }
+
+        .detail-image {
+            aspect-ratio: 16 / 10;
+            background: #ddd;
+            overflow: hidden;
+        }
+
+        .detail-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* =========================================================
+           SKILLS / SOFTWARE
+        ========================================================= */
+
+        .software-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid #ccc;
+            border-left: 1px solid #ccc;
+        }
+
+        .software {
+            padding: 30px;
+            border-right: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .software h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .software p {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* =========================================================
+           ABOUT
+        ========================================================= */
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+
+        .about-large {
+            font-size: clamp(1.5rem, 3vw, 2.4rem);
+            line-height: 1.25;
+            letter-spacing: -0.025em;
+        }
+
+        .about-text {
+            color: #666;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        .award {
+            border-top: 1px solid #ccc;
+            padding: 18px 0;
+        }
+
+        .award:last-child {
+            border-bottom: 1px solid #ccc;
+        }
+
+        .award strong {
+            display: block;
+        }
+
+        .award span {
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        /* =========================================================
+           CONTACT
+        ========================================================= */
+
+        .contact {
+            background: #202020;
+            color: white;
+        }
+
+        .contact .section-number {
+            color: #aaa;
+        }
+
+        .contact .section-description {
+            color: #aaa;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 70px;
+        }
+
+        .contact h2 {
+            font-size: clamp(2.8rem, 6vw, 5.5rem);
+            line-height: 0.95;
+            letter-spacing: -0.05em;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            justify-content: center;
+        }
+
+        .contact-link {
+            font-size: 1.1rem;
+            border-bottom: 1px solid #555;
+            padding-bottom: 12px;
+        }
+
+        .contact-link span {
+            color: #888;
+            font-size: 0.75rem;
+            display: block;
+            margin-bottom: 3px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        /* =========================================================
+           FOOTER
+        ========================================================= */
+
+        footer {
+            background: #202020;
+            color: #777;
+            padding: 25px 0;
+            font-size: 0.75rem;
+            border-top: 1px solid #444;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        /* =========================================================
+           MOBILE
+        ========================================================= */
+
+        @media (max-width: 850px) {
+
+            .nav-container {
+                height: auto;
+                padding: 18px 0;
+                align-items: flex-start;
+            }
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: flex-end;
+            }
+
+            .hero {
+                min-height: auto;
+                padding: 80px 0;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+            .hero-image {
+                max-width: 650px;
+            }
+
+            .projects {
+                grid-template-columns: 1fr;
+            }
+
+            .project-detail-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .software-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+
+            .section-header {
+                display: block;
+            }
+
+            .section-description {
+                margin-top: 20px;
+            }
+        }
+
+        @media (max-width: 550px) {
+
+            .nav-links {
+                font-size: 0.75rem;
+                gap: 10px;
+            }
+
+            section {
+                padding: 75px 0;
+            }
+
+            .software-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     NAVIGATION
+========================================================= -->
+
+<nav>
+    <div class="nav-container">
+
+        <a href="#" class="logo">
+            WYATT HARRYMAN
+        </a>
+
+        <ul class="nav-links">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#gis">GIS</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<header class="hero">
+
+    <div class="container">
+
+        <div class="hero-grid">
+
+            <div>
+
+                <div class="eyebrow">
+                    Geography • GIS • Cartography
+                </div>
+
+                <h1>
+                    Wyatt<br>
+                    Harryman
+                </h1>
+
+                <h2>
+                    GIS • Cartography • Spatial Visualization
+                </h2>
+
+                <p class="hero-description">
+                    Geography graduate specializing in geographic information
+                    systems, cartographic design, spatial analysis, and
+                    geographic visualization.
+                </p>
+
+                <div class="button-row">
+
+                    <a href="#work" class="button primary">
+                        View My Work
+                    </a>
+
+                    <a href="#contact" class="button">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Replace this image with one of your strongest maps -->
+
+            <div class="hero-image">
+
+                <img
+                    src="images/featured-map.jpg"
+                    alt="Featured cartographic work"
+                >
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     FEATURED WORK
+========================================================= -->
+
+<section id="work">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+                <div class="section-number">01 / FEATURED WORK</div>
+
+                <h2 class="section-title">
+                    Selected Projects
+                </h2>
+            </div>
+
+            <p class="section-description">
+                A selection of cartographic, GIS, 3D visualization,
+                and spatial analysis projects.
+            </p>
+
+        </div>
+
+
+        <div class="projects">
+
+
+            <!-- HORSES -->
+
+            <article class="project">
+
+                <div class="project-image">
+
+                    <img
+                        src="images/horses-kentucky.jpg"
+                        alt="Horses of Kentucky map"
+                    >
+
+                </div>
+
+                <div class="project-number">01</div>
+
+                <h3>
+                    Horses of Kentucky
+                </h3>
+
+                <p>
+                    A thematic map combining population data,
+                    normalization, terrain visualization, and
+                    graphic design.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">ArcGIS Pro</span>
+                    <span class="tag">Blender</span>
+                    <span class="tag">Photoshop</span>
+                    <span class="tag">Illustrator</span>
+                </div>
+
+            </article>
+
+
+            <!-- KENTUCKY IRON -->
+
+            <article class="project">
+
+                <div class="project-image">
+
+                    <img
+                        src="images/kentucky-iron.jpg"
+                        alt="Kentucky Iron Industry project"
+                    >
+
+                </div>
+
+                <div class="project-number">02</div>
+
+                <h3>
+                    The Kentucky Iron Industry
+                </h3>
+
+                <p>
+                    A geographic visualization project combining
+                    LiDAR scanning, ArcPy, terrain processing,
+                    Cesium, and web development.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">ArcPy</span>
+                    <span class="tag">LiDAR</span>
+                    <span class="tag">Cesium</span>
+                    <span class="tag">HTML</span>
+                </div>
+
+            </article>
+
+
+            <!-- ENERGY -->
+
+            <article class="project">
+
+                <div class="project-image">
+
+                    <img
+                        src="images/energy-use.jpg"
+                        alt="Energy Use in the United States map"
+                    >
+
+                </div>
+
+                <div class="project-number">03</div>
+
+                <h3>
+                    Energy Use in the United States
+                </h3>
+
+                <p>
+                    A national map series visualizing coal,
+                    electricity, oil, and solar energy use.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">ArcGIS Pro</span>
+                    <span class="tag">Data Processing</span>
+                    <span class="tag">Blender</span>
+                    <span class="tag">Illustrator</span>
+                </div>
+
+            </article>
+
+
+            <!-- SANTORINI -->
+
+            <article class="project">
+
+                <div class="project-image">
+
+                    <img
+                        src="images/santorini.jpg"
+                        alt="Santorini Caldera visualization"
+                    >
+
+                </div>
+
+                <div class="project-number">04</div>
+
+                <h3>
+                    An Oblique View of the Santorini Caldera
+                </h3>
+
+                <p>
+                    A 3D geographic visualization combining
+                    DEM, bathymetry, satellite imagery, Blender,
+                    and cartographic design.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">DEM</span>
+                    <span class="tag">Bathymetry</span>
+                    <span class="tag">Blender</span>
+                    <span class="tag">Illustrator</span>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     HORSES PROJECT DETAIL
+========================================================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="project-detail">
+
+            <div class="project-detail-grid">
+
+                <div>
+
+                    <div class="section-number">
+                        FEATURED PROJECT / 01
+                    </div>
+
+                    <h3>
+                        Horses of Kentucky
+                    </h3>
+
+                    <p>
+                        A thematic cartographic project exploring
+                        the relationship between horse populations
+                        and human population across Kentucky.
+                    </p>
+
+
+                    <div class="project-info">
+
+                        <div class="info-block">
+                            <strong>Objective</strong>
+                            <span>
+                                Create a visually effective map
+                                communicating a normalized population ratio.
+                            </span>
+                        </div>
+
+                        <div class="info-block">
+                            <strong>Data</strong>
+                            <span>
+                                Kentucky Equine Survey, U.S. Census Data,
+                                TIGER/Line Shapefiles, and DEM data.
+                            </span>
+                        </div>
+
+                        <div class="info-block">
+                            <strong>Software</strong>
+                            <span>
+                                ArcGIS Pro, Blender, Photoshop,
+                                Illustrator.
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <div class="workflow">
+
+                        <div class="workflow-step">
+                            Data
+                        </div>
+
+                        <div class="workflow-arrow">→</div>
+
+                        <div class="workflow-step">
+                            ArcGIS Pro
+                        </div>
+
+                        <div class="workflow-arrow">→</div>
+
+                        <div class="workflow-step">
+                            Blender
+                        </div>
+
+                        <div class="workflow-arrow">→</div>
+
+                        <div class="workflow-step">
+                            Photoshop
+                        </div>
+
+                        <div class="workflow-arrow">→</div>
+
+                        <div class="workflow-step">
+                            Illustrator
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="detail-image">
+
+                    <img
+                        src="images/horses-kentucky.jpg"
+                        alt="Horses of Kentucky final map"
+                    >
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     GIS & AUTOMATION
+========================================================= -->
+
+<section id="gis">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="section-number">
+                    02 / GIS & AUTOMATION
+                </div>
+
+                <h2 class="section-title">
+                    GIS & Technical Work
+                </h2>
+
+            </div>
+
+            <p class="section-description">
+                GIS projects demonstrating spatial data processing,
+                automation, terrain visualization, and geographic
+                technology.
+            </p>
+
+        </div>
+
+
+        <div class="projects">
+
+
+            <!-- ARCPY -->
+
+            <article class="project">
+
+                <div class="project-image">
+
+                    <img
+                        src="images/arcpy-workflow.jpg"
+                        alt="ArcPy workflow"
+                    >
+
+                </div>
+
+                <div class="project-number">05</div>
+
+                <h3>
+                    ArcPy Automation
+                </h3>
+
+                <p>
+                    Automated GIS workflows using Python and ArcPy
+                    to process geographic datasets and reduce
+                    repetitive geoprocessing tasks.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">ArcPy</span>
+                    <span class="tag">ArcGIS Pro</span>
+                </div>
+
+            </article>
+
+
+            <!-- DATA PREPARATION -->
+
+            <article class="project">
+
+                <div class="project-image">
+
+                    <img
+                        src="images/data-preparation.jpg"
+                        alt="GIS data preparation workflow"
+                    >
+
+                </div>
+
+                <div class="project-number">06</div>
+
+                <h3>
+                    GIS Data Preparation & QA/QC
+                </h3>
+
+                <p>
+                    Geographic data preparation involving cleaning,
+                    joining, clipping, projection, processing,
+                    symbology, and quality control.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">GIS</span>
+                    <span class="tag">Data Management</span>
+                    <span class="tag">QA/QC</span>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CARTOGRAPHIC DESIGN
+========================================================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="section-number">
+                    03 / CARTOGRAPHIC DESIGN
+                </div>
+
+                <h2 class="section-title">
+                    Map Design
+                </h2>
+
+            </div>
+
+            <p class="section-description">
+                Geographic products focused on visual hierarchy,
+                cartographic communication, and polished map design.
+            </p>
+
+        </div>
+
+
+        <div class="projects">
+
+
+            <!-- MAP REDESIGN -->
+
+            <article class="project">
+
+                <div class="project-image">
+
+                    <img
+                        src="images/map-redesign.jpg"
+                        alt="Map redesign project"
+                    >
+
+                </div>
+
+                <div class="project-number">07</div>
+
+                <h3>
+                    Map Redesign
+                </h3>
+
+                <p>
+                    A before-and-after cartographic redesign focused
+                    on improving hierarchy, readability, labeling,
+                    symbology, and visual communication.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Cartography</span>
+                    <span class="tag">Illustrator</span>
+                    <span class="tag">Photoshop</span>
+                </div>
+
+            </article>
+
+
+            <!-- MAP SERIES -->
+
+            <article class="project">
+
+                <div class="project-image">
+
+                    <img
+                        src="images/map-series.jpg"
+                        alt="Cartographic map series"
+                    >
+
+                </div>
+
+                <div class="project-number">08</div>
+
+                <h3>
+                    Cartographic Map Series
+                </h3>
+
+                <p>
+                    A coordinated collection of maps designed with
+                    consistent visual hierarchy and geographic
+                    communication.
+                </p>
+
+                <div class="tags">
+                    <span class="tag">Map Design</span>
+                    <span class="tag">ArcGIS Pro</span>
+                    <span class="tag">Adobe</span>
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SOFTWARE
+========================================================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="section-number">
+                    04 / SOFTWARE
+                </div>
+
+                <h2 class="section-title">
+                    Tools & Workflow
+                </h2>
+
+            </div>
+
+            <p class="section-description">
+                Experience combining GIS, programming, graphic design,
+                3D visualization, and web technologies into geographic
+                production workflows.
+            </p>
+
+        </div>
+
+
+        <div class="software-grid">
+
+            <div class="software">
+                <h3>ArcGIS Pro</h3>
+                <p>GIS, cartography, spatial analysis, geoprocessing.</p>
+            </div>
+
+            <div class="software">
+                <h3>ArcPy / Python</h3>
+                <p>GIS automation and geoprocessing workflows.</p>
+            </div>
+
+            <div class="software">
+                <h3>Adobe Illustrator</h3>
+                <p>Cartographic layout, vector graphics, and map design.</p>
+            </div>
+
+            <div class="software">
+                <h3>Adobe Photoshop</h3>
+                <p>Image processing, shadows, highlights, and color correction.</p>
+            </div>
+
+            <div class="software">
+                <h3>Adobe InDesign</h3>
+                <p>Document and graphic layout.</p>
+            </div>
+
+            <div class="software">
+                <h3>Blender</h3>
+                <p>Terrain visualization and 3D geographic representation.</p>
+            </div>
+
+            <div class="software">
+                <h3>Cesium</h3>
+                <p>Interactive 3D geographic visualization.</p>
+            </div>
+
+            <div class="software">
+                <h3>HTML</h3>
+                <p>Web-based geographic products and portfolio development.</p>
+            </div>
+
+            <div class="software">
+                <h3>QGIS</h3>
+                <p>GIS and spatial data processing.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="section-number">
+                    05 / ABOUT
+                </div>
+
+                <h2 class="section-title">
+                    About Me
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="about-grid">
+
+            <div class="about-large">
+
+                Geography graduate with a focus on GIS,
+                cartography, spatial analysis, and geographic
+                visualization.
+
+            </div>
+
+
+            <div class="about-text">
+
+                <p>
+                    I am a recent Geography graduate from the
+                    University of Kentucky with experience developing
+                    geographic products through GIS, cartography,
+                    spatial analysis, and visualization workflows.
+                </p>
+
+                <p>
+                    My work combines geographic data processing with
+                    visual design, allowing me to take geographic
+                    information from initial data preparation through
+                    to a finished map or visualization.
+                </p>
+
+                <p>
+                    I am particularly interested in opportunities
+                    involving GIS, cartography, map production,
+                    spatial visualization, and geographic technology.
+                </p>
+
+
+                <div class="award">
+
+                    <strong>
+                        Thomas M. Geoghegan Award
+                    </strong>
+
+                    <span>
+                        2026 — Geography
+                    </span>
+
+                </div>
+
+
+                <div class="award">
+
+                    <strong>
+                        Gyula Pauer Cartography Award
+                    </strong>
+
+                    <span>
+                        2026 — Cartography
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     RESUME
+========================================================= -->
+
+<section>
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="section-number">
+                    06 / RESUME
+                </div>
+
+                <h2 class="section-title">
+                    Resume
+                </h2>
+
+            </div>
+
+            <p class="section-description">
+                Education, experience, technical skills, awards,
+                and additional qualifications.
+            </p>
+
+        </div>
+
+
+        <a
+            href="resume.pdf"
+            target="_blank"
+            class="button primary"
+        >
+            View Resume
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact" class="contact">
+
+    <div class="container">
+
+        <div class="section-header">
+
+            <div>
+
+                <div class="section-number">
+                    07 / CONTACT
+                </div>
+
+                <h2 class="section-title">
+                    Let's Connect
+                </h2>
+
+            </div>
+
+            <p class="section-description">
+                Interested in GIS, cartography, map production,
+                or geographic visualization opportunities.
+            </p>
+
+        </div>
+
+
+        <div class="contact-content">
+
+            <div>
+
+                <h2>
+                    Get in<br>
+                    touch.
+                </h2>
+
+            </div>
+
+
+            <div class="contact-links">
+
+                <a
+                    href="mailto:wcharryman12@gmail.com"
+                    class="contact-link"
+                >
+                    <span>Email</span>
+                    wcharryman12@gmail.com
+                </a>
+
+                <a
+                    href="tel:8596840162"
+                    class="contact-link"
+                >
+                    <span>Phone</span>
+                    859-684-0162
+                </a>
+
+                <a
+                    href="https://github.com/"
+                    target="_blank"
+                    class="contact-link"
+                >
+                    <span>GitHub</span>
+                    View GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <span>
+                © 2026 Wyatt Harryman
+            </span>
+
+            <span>
+                GIS • Cartography • Spatial Visualization
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+</body>
+</html>
