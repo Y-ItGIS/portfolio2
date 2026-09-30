@@ -3,12 +3,14 @@
 <html lang="en">
 
 <head>
-
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Wyatt Harryman | GIS & Cartography</title>
+    <link rel="stylesheet" href="https://use.typekit.net/zwf8ezl.css">
 
+    <title>Wyatt Harryman | GIS & Cartography</title>
+    
     <style>
 
         /* =========================================
@@ -26,7 +28,9 @@
         }
 
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: "brandon-grotesque", sans-serif;
+            font-weight: 400;
+            font-style: normal;
             background-color: #f7f7f5;
             color: #222;
         }
@@ -188,6 +192,15 @@
             color: #222;
         }
 
+        .work-button span {
+        display: inline-block;
+        margin-left: 10px;
+        transition: transform 0.2s ease;
+        }
+
+        .work-button:hover span {
+        transform: translateX(5px);
+        }
 
         /* =========================================
            SOFTWARE ICONS
@@ -394,7 +407,7 @@
                 <!-- VIEW MY WORK -->
 
                 <a href="projects.html" class="work-button">
-                    VIEW MY WORK
+                    VIEW MY WORK <span>→</span>
                 </a>
 
 
