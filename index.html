@@ -66,12 +66,16 @@
         }
 
 
+        /* Name on left */
+
         .header-name {
             font-size: 18px;
             font-weight: 600;
             letter-spacing: 1px;
         }
 
+
+        /* Navigation */
 
         nav {
             display: flex;
@@ -291,6 +295,7 @@
             margin-bottom: 12px;
         }
 
+
         .project-subtitle {
             font-size: 20px;
 
@@ -314,6 +319,15 @@
             gap: 60px;
 
             align-items: start;
+        }
+
+
+        /* =========================================
+           LEFT PROJECT VISUALS
+        ========================================= */
+
+        .project-visuals {
+            width: 100%;
         }
 
 
@@ -463,9 +477,9 @@
 
             grid-template-columns: 1fr 1fr;
 
-            gap: 35px;
+            gap: 25px;
 
-            margin-top: 70px;
+            margin-top: 25px;
         }
 
         .supporting-image {
@@ -481,7 +495,7 @@
         }
 
         .supporting-label {
-            margin-top: 15px;
+            margin-top: 12px;
 
             font-size: 14px;
 
@@ -612,9 +626,9 @@
 
 
             .supporting-images {
-                grid-template-columns: 1fr;
+                grid-template-columns: 1fr 1fr;
 
-                gap: 40px;
+                gap: 15px;
             }
 
         }
@@ -803,7 +817,7 @@
 
 
         <!-- =========================================
-             PROJECTS
+             PROJECTS SECTION
         ========================================= -->
 
         <section class="projects" id="projects">
@@ -826,25 +840,74 @@
 
 
                 <!-- =====================================
-                     MAIN PROJECT AREA
+                     PROJECT MAIN AREA
                 ====================================== -->
 
                 <div class="project-main">
 
 
-                    <!-- MAIN MAP -->
+                    <!-- =================================
+                         LEFT: PROJECT VISUALS
+                    ================================== -->
 
-                    <div class="main-map">
+                    <div class="project-visuals">
 
-                        <img
-                            src="images/horses-kentucky-main.jpg"
-                            alt="Horses of Kentucky map">
+
+                        <!-- MAIN MAP -->
+
+                        <div class="main-map">
+
+                            <img
+                                src="images/horses-kentucky-main.jpg"
+                                alt="Horses of Kentucky map">
+
+                        </div>
+
+
+                        <!-- SUPPORTING IMAGES -->
+
+                        <div class="supporting-images">
+
+
+                            <!-- POPULATION MAP -->
+
+                            <div class="supporting-image">
+
+                                <img
+                                    src="images/horses-kentucky-population.png"
+                                    alt="Population Map">
+
+                                <div class="supporting-label">
+                                    Population Map
+                                </div>
+
+                            </div>
+
+
+                            <!-- SHADED RELIEF -->
+
+                            <div class="supporting-image">
+
+                                <img
+                                    src="images/horses-kentucky-relief.png"
+                                    alt="Shaded Relief">
+
+                                <div class="supporting-label">
+                                    Shaded Relief
+                                </div>
+
+                            </div>
+
+
+                        </div>
 
                     </div>
 
 
 
-                    <!-- PROJECT INFORMATION -->
+                    <!-- =================================
+                         RIGHT: PROJECT INFORMATION
+                    ================================== -->
 
                     <div class="project-info">
 
@@ -1072,47 +1135,6 @@
 
 
                     </div>
-
-                </div>
-
-
-
-                <!-- =====================================
-                     SUPPORTING IMAGES
-                ====================================== -->
-
-                <div class="supporting-images">
-
-
-                    <!-- POPULATION MAP -->
-
-                    <div class="supporting-image">
-
-                        <img
-                            src="images/horses-kentucky-population.jpg"
-                            alt="Population Map">
-
-                        <div class="supporting-label">
-                            Population Map
-                        </div>
-
-                    </div>
-
-
-                    <!-- SHADED RELIEF -->
-
-                    <div class="supporting-image">
-
-                        <img
-                            src="images/horses-kentucky-relief.jpg"
-                            alt="Shaded Relief">
-
-                        <div class="supporting-label">
-                            Shaded Relief
-                        </div>
-
-                    </div>
-
 
                 </div>
 
