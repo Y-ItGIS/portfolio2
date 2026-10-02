@@ -340,7 +340,7 @@
 
             background-color: #e8e8e5;
 
-            overflow: hidden;
+            overflow: visible;
         }
 
         .main-map img {
@@ -508,6 +508,70 @@
 
 
         /* =========================================
+           IMAGE HOVER ZOOM
+        ========================================= */
+
+        .image-preview {
+            position: relative;
+            cursor: zoom-in;
+            z-index: 1;
+        }
+
+        .image-preview:hover {
+            z-index: 100;
+        }
+
+        .image-preview::after {
+            content: "";
+
+            position: fixed;
+
+            left: var(--cursor-x, 50vw);
+            top: var(--cursor-y, 50vh);
+
+            width: 900px;
+            max-width: 80vw;
+
+            height: 700px;
+            max-height: 80vh;
+
+            transform: translate(-50%, -50%) scale(0.8);
+
+            background-image: var(--image);
+
+            background-size: 180% auto;
+
+            background-position: var(--image-x, 50%) var(--image-y, 50%);
+
+            background-repeat: no-repeat;
+
+            background-color: #f7f7f5;
+
+            border: 1px solid #d8d8d5;
+
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+
+            opacity: 0;
+
+            visibility: hidden;
+
+            transition:
+                opacity 0.2s ease,
+                transform 0.2s ease;
+
+            pointer-events: none;
+
+            z-index: 2000;
+        }
+
+        .image-preview:hover::after {
+            opacity: 1;
+            visibility: visible;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+
+        /* =========================================
            MOBILE
         ========================================= */
 
@@ -622,6 +686,15 @@
 
             .workflow-arrow {
                 font-size: 16px;
+            }
+
+
+            .image-preview::after {
+                width: 90vw;
+                height: 60vh;
+                max-width: none;
+                max-height: none;
+                background-size: 180% auto;
             }
 
 
@@ -855,7 +928,8 @@
 
                         <!-- MAIN MAP -->
 
-                        <div class="main-map">
+                        <div class="main-map image-preview"
+                             style="--image: url('images/horses-kentucky-main.jpg');">
 
                             <img
                                 src="images/horses-kentucky-main.jpg"
@@ -871,7 +945,8 @@
 
                             <!-- POPULATION MAP -->
 
-                            <div class="supporting-image">
+                            <div class="supporting-image image-preview"
+                                 style="--image: url('images/horses-kentucky-population.png');">
 
                                 <img
                                     src="images/horses-kentucky-population.png"
@@ -886,7 +961,8 @@
 
                             <!-- SHADED RELIEF -->
 
-                            <div class="supporting-image">
+                            <div class="supporting-image image-preview"
+                                 style="--image: url('images/horses-kentucky-relief.png');">
 
                                 <img
                                     src="images/horses-kentucky-relief.png"
@@ -1146,6 +1222,38 @@
 
     </main>
 
+
+
+
+    <script>
+
+        /* =========================================
+           CURSOR-BASED IMAGE ZOOM
+        ========================================= */
+
+        document.querySelectorAll('.image-preview').forEach(function (image) {
+
+            image.addEventListener('mousemove', function (event) {
+
+                const rect = image.getBoundingClientRect();
+
+                const x = event.clientX - rect.left;
+                const y = event.clientY - rect.top;
+
+                const xPercent = (x / rect.width) * 100;
+                const yPercent = (y / rect.height) * 100;
+
+                image.style.setProperty('--cursor-x', event.clientX + 'px');
+                image.style.setProperty('--cursor-y', event.clientY + 'px');
+
+                image.style.setProperty('--image-x', xPercent + '%');
+                image.style.setProperty('--image-y', yPercent + '%');
+
+            });
+
+        });
+
+    </script>
 
 </body>
 
