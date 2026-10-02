@@ -1,16 +1,15 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-    
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://use.typekit.net/zwf8ezl.css">
 
     <title>Wyatt Harryman | GIS & Cartography</title>
-    
+
     <style>
 
         /* =========================================
@@ -67,16 +66,12 @@
         }
 
 
-        /* Name on left */
-
         .header-name {
             font-size: 18px;
             font-weight: 600;
             letter-spacing: 1px;
         }
 
-
-        /* Navigation */
 
         nav {
             display: flex;
@@ -203,14 +198,15 @@
         }
 
         .work-button span {
-        display: inline-block;
-        margin-left: 10px;
-        transition: transform 0.2s ease;
+            display: inline-block;
+            margin-left: 10px;
+            transition: transform 0.2s ease;
         }
 
         .work-button:hover span {
-        transform: translateX(5px);
+            transform: translateX(5px);
         }
+
 
         /* =========================================
            SOFTWARE ICONS
@@ -261,13 +257,268 @@
 
 
         /* =========================================
+           PROJECTS SECTION
+        ========================================= */
+
+        .projects {
+            padding: 140px 7vw 120px;
+
+            background-color: #f7f7f5;
+
+            scroll-margin-top: 75px;
+        }
+
+
+        .project-container {
+            max-width: 1500px;
+            margin: 0 auto;
+        }
+
+
+        /* =========================================
+           PROJECT HEADER
+        ========================================= */
+
+        .project-title {
+            font-size: clamp(45px, 7vw, 90px);
+
+            font-weight: 600;
+
+            letter-spacing: -3px;
+
+            line-height: 1;
+
+            margin-bottom: 12px;
+        }
+
+        .project-subtitle {
+            font-size: 20px;
+
+            letter-spacing: 2px;
+
+            color: #666;
+
+            margin-bottom: 60px;
+        }
+
+
+        /* =========================================
+           PROJECT MAIN AREA
+        ========================================= */
+
+        .project-main {
+            display: grid;
+
+            grid-template-columns: minmax(0, 1.7fr) minmax(300px, 0.8fr);
+
+            gap: 60px;
+
+            align-items: start;
+        }
+
+
+        /* =========================================
+           MAIN MAP
+        ========================================= */
+
+        .main-map {
+            width: 100%;
+
+            background-color: #e8e8e5;
+
+            overflow: hidden;
+        }
+
+        .main-map img {
+            display: block;
+
+            width: 100%;
+
+            height: auto;
+        }
+
+
+        /* =========================================
+           PROJECT INFORMATION
+        ========================================= */
+
+        .project-info {
+            padding-top: 5px;
+        }
+
+        .project-info-block {
+            margin-bottom: 45px;
+        }
+
+        .project-info-title {
+            font-size: 19px;
+
+            font-weight: 600;
+
+            letter-spacing: 1px;
+
+            margin-bottom: 14px;
+        }
+
+        .project-info p {
+            font-size: 16px;
+
+            line-height: 1.7;
+
+            color: #555;
+        }
+
+
+        /* =========================================
+           WORKFLOW
+        ========================================= */
+
+        .workflow {
+            margin-top: 15px;
+        }
+
+        .workflow-row {
+            display: flex;
+
+            align-items: center;
+
+            justify-content: space-between;
+
+            gap: 8px;
+        }
+
+        .workflow-item {
+            flex: 1;
+
+            text-align: center;
+
+            min-width: 0;
+        }
+
+        .workflow-icon {
+            width: 65px;
+            height: 65px;
+
+            margin: 0 auto 10px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+        }
+
+        .workflow-icon img {
+            width: 55px;
+            height: 55px;
+
+            object-fit: contain;
+
+            filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.3));
+        }
+
+        .workflow-label {
+            font-size: 11px;
+
+            line-height: 1.3;
+
+            color: #555;
+        }
+
+        .workflow-arrow {
+            font-size: 22px;
+
+            color: #777;
+
+            flex-shrink: 0;
+
+            padding-bottom: 20px;
+        }
+
+
+        /* =========================================
+           LISTS
+        ========================================= */
+
+        .project-list {
+            padding-left: 20px;
+
+            color: #555;
+        }
+
+        .project-list li {
+            margin-bottom: 9px;
+
+            font-size: 15px;
+
+            line-height: 1.5;
+        }
+
+
+        /* =========================================
+           SUPPORTING IMAGES
+        ========================================= */
+
+        .supporting-images {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 35px;
+
+            margin-top: 70px;
+        }
+
+        .supporting-image {
+            width: 100%;
+        }
+
+        .supporting-image img {
+            display: block;
+
+            width: 100%;
+
+            height: auto;
+        }
+
+        .supporting-label {
+            margin-top: 15px;
+
+            font-size: 14px;
+
+            letter-spacing: 1px;
+
+            text-align: left;
+
+            color: #444;
+        }
+
+
+        /* =========================================
            MOBILE
         ========================================= */
+
+        @media (max-width: 900px) {
+
+            header {
+                padding: 0 30px;
+            }
+
+            .project-main {
+                grid-template-columns: 1fr;
+
+                gap: 45px;
+            }
+
+            .project-info {
+                max-width: 750px;
+            }
+
+        }
+
 
         @media (max-width: 700px) {
 
             header {
-
                 height: auto;
 
                 padding: 20px 25px;
@@ -279,7 +530,6 @@
 
 
             nav {
-
                 gap: 18px;
 
                 flex-wrap: wrap;
@@ -289,25 +539,21 @@
 
 
             nav a {
-
                 font-size: 12px;
             }
 
 
             .home {
-
                 padding-top: 170px;
             }
 
 
             .home-name {
-
                 letter-spacing: -3px;
             }
 
 
             .home-title {
-
                 line-height: 1.6;
 
                 letter-spacing: 2px;
@@ -315,8 +561,60 @@
 
 
             .software-icons {
-
                 gap: 25px;
+            }
+
+
+            .projects {
+                padding: 120px 25px 80px;
+            }
+
+
+            .project-title {
+                letter-spacing: -2px;
+            }
+
+
+            .project-subtitle {
+                font-size: 16px;
+
+                line-height: 1.5;
+
+                margin-bottom: 40px;
+            }
+
+
+            .workflow-row {
+                gap: 3px;
+            }
+
+
+            .workflow-icon {
+                width: 50px;
+                height: 50px;
+            }
+
+
+            .workflow-icon img {
+                width: 42px;
+                height: 42px;
+            }
+
+
+            .workflow-label {
+                font-size: 9px;
+            }
+
+
+            .workflow-arrow {
+                font-size: 16px;
+            }
+
+
+            .supporting-images {
+                grid-template-columns: 1fr;
+
+                gap: 40px;
             }
 
         }
@@ -335,27 +633,19 @@
 
     <header>
 
-        <a href="index.html" class="header-name">
+        <a href="#home" class="header-name">
             WYATT HARRYMAN
         </a>
 
 
         <nav>
 
-            <a href="index.html">
+            <a href="#home">
                 HOME
             </a>
 
-            <a href="projects.html">
+            <a href="#projects">
                 PROJECTS
-            </a>
-
-            <a href="about.html">
-                ABOUT ME
-            </a>
-
-            <a href="contact.html">
-                CONTACT
             </a>
 
         </nav>
@@ -365,12 +655,17 @@
 
 
     <!-- =========================================
-         HOME PAGE
+         MAIN
     ========================================= -->
 
     <main>
 
-        <section class="home">
+
+        <!-- =========================================
+             HOME PAGE
+        ========================================= -->
+
+        <section class="home" id="home">
 
             <div class="home-content">
 
@@ -402,7 +697,7 @@
 
                 <!-- VIEW MY WORK -->
 
-                <a href="projects.html" class="work-button">
+                <a href="#projects" class="work-button">
                     VIEW MY WORK <span>→</span>
                 </a>
 
@@ -415,38 +710,87 @@
                 <div class="software-icons">
 
                     <div class="software-item">
+
                         <div class="software-icon">
-                            <img src="images/icons/arcgis.png" alt="ArcGIS Pro">
+
+                            <img
+                                src="images/icons/arcgis.png"
+                                alt="ArcGIS Pro">
+
                         </div>
-                        <div class="software-name">ArcGIS Pro</div>
+
+                        <div class="software-name">
+                            ArcGIS Pro
+                        </div>
+
                     </div>
 
-                    <div class="software-item">
-                        <div class="software-icon">
-                            <img src="images/icons/python.png" alt="ArcPy / Python">
-                        </div>
-                        <div class="software-name">ArcPy / Python</div>
-                    </div>
 
                     <div class="software-item">
+
                         <div class="software-icon">
-                            <img src="images/icons/adobe.png" alt="Adobe Creative Suite">
+
+                            <img
+                                src="images/icons/python.png"
+                                alt="ArcPy / Python">
+
                         </div>
-                        <div class="software-name">Adobe Creative Suite</div>
+
+                        <div class="software-name">
+                            ArcPy / Python
+                        </div>
+
                     </div>
 
-                    <div class="software-item">
-                        <div class="software-icon">
-                            <img src="images/icons/blender.png" alt="Blender">
-                        </div>
-                        <div class="software-name">Blender</div>
-                    </div>
 
                     <div class="software-item">
+
                         <div class="software-icon">
-                            <img src="images/icons/cesium.png" alt="Cesium ion">
+
+                            <img
+                                src="images/icons/adobe.png"
+                                alt="Adobe Creative Suite">
+
                         </div>
-                        <div class="software-name">Cesium ion</div>
+
+                        <div class="software-name">
+                            Adobe Creative Suite
+                        </div>
+
+                    </div>
+
+
+                    <div class="software-item">
+
+                        <div class="software-icon">
+
+                            <img
+                                src="images/icons/blender.png"
+                                alt="Blender">
+
+                        </div>
+
+                        <div class="software-name">
+                            Blender
+                        </div>
+
+                    </div>
+
+
+                    <div class="software-item">
+
+                        <div class="software-icon">
+
+                            <img
+                                src="images/icons/cesium.png"
+                                alt="Cesium ion">
+
+                        </div>
+
+                        <div class="software-name">
+                            Cesium ion
+                        </div>
+
                     </div>
 
                 </div>
@@ -456,10 +800,331 @@
 
         </section>
 
+
+
+        <!-- =========================================
+             PROJECTS
+        ========================================= -->
+
+        <section class="projects" id="projects">
+
+            <div class="project-container">
+
+
+                <!-- =====================================
+                     PROJECT HEADER
+                ====================================== -->
+
+                <h2 class="project-title">
+                    Horses of Kentucky
+                </h2>
+
+                <div class="project-subtitle">
+                    Thematic Cartography | Terrain
+                </div>
+
+
+
+                <!-- =====================================
+                     MAIN PROJECT AREA
+                ====================================== -->
+
+                <div class="project-main">
+
+
+                    <!-- MAIN MAP -->
+
+                    <div class="main-map">
+
+                        <img
+                            src="images/horses-kentucky-main.jpg"
+                            alt="Horses of Kentucky map">
+
+                    </div>
+
+
+
+                    <!-- PROJECT INFORMATION -->
+
+                    <div class="project-info">
+
+
+                        <!-- OBJECTIVE -->
+
+                        <div class="project-info-block">
+
+                            <h3 class="project-info-title">
+                                Objective
+                            </h3>
+
+                            <p>
+                                Create a county-level map showing the
+                                relative concentration of horses across
+                                Kentucky while incorporating a shaded
+                                relief to provide geographic context.
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- MY ROLE -->
+
+                        <div class="project-info-block">
+
+                            <h3 class="project-info-title">
+                                My Role
+                            </h3>
+
+                            <p>
+                                GIS processing, spatial analysis,
+                                cartographic design, terrain visualization,
+                                and final graphic production.
+                            </p>
+
+                        </div>
+
+
+
+                        <!-- WORKFLOW -->
+
+                        <div class="project-info-block">
+
+                            <h3 class="project-info-title">
+                                Workflow
+                            </h3>
+
+                            <div class="workflow">
+
+                                <div class="workflow-row">
+
+
+                                    <!-- ARCGIS -->
+
+                                    <div class="workflow-item">
+
+                                        <div class="workflow-icon">
+
+                                            <img
+                                                src="images/icons/arcgis.png"
+                                                alt="ArcGIS Pro">
+
+                                        </div>
+
+                                        <div class="workflow-label">
+                                            ArcGIS Pro
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- ARROW -->
+
+                                    <div class="workflow-arrow">
+                                        →
+                                    </div>
+
+
+                                    <!-- BLENDER -->
+
+                                    <div class="workflow-item">
+
+                                        <div class="workflow-icon">
+
+                                            <img
+                                                src="images/icons/blender.png"
+                                                alt="Blender">
+
+                                        </div>
+
+                                        <div class="workflow-label">
+                                            Blender
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- ARROW -->
+
+                                    <div class="workflow-arrow">
+                                        →
+                                    </div>
+
+
+                                    <!-- PHOTOSHOP -->
+
+                                    <div class="workflow-item">
+
+                                        <div class="workflow-icon">
+
+                                            <img
+                                                src="images/icons/photoshop.png"
+                                                alt="Adobe Photoshop">
+
+                                        </div>
+
+                                        <div class="workflow-label">
+                                            Photoshop
+                                        </div>
+
+                                    </div>
+
+
+                                    <!-- ARROW -->
+
+                                    <div class="workflow-arrow">
+                                        →
+                                    </div>
+
+
+                                    <!-- ILLUSTRATOR -->
+
+                                    <div class="workflow-item">
+
+                                        <div class="workflow-icon">
+
+                                            <img
+                                                src="images/icons/illustrator.png"
+                                                alt="Adobe Illustrator">
+
+                                        </div>
+
+                                        <div class="workflow-label">
+                                            Illustrator
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <!-- DATA -->
+
+                        <div class="project-info-block">
+
+                            <h3 class="project-info-title">
+                                Data
+                            </h3>
+
+                            <ul class="project-list">
+
+                                <li>
+                                    Kentucky Equine Survey
+                                </li>
+
+                                <li>
+                                    U.S. Census Data
+                                </li>
+
+                                <li>
+                                    TIGER/Line Shapefiles
+                                </li>
+
+                                <li>
+                                    DEM from Viewfinder Panoramas
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+
+                        <!-- KEY TECHNIQUES -->
+
+                        <div class="project-info-block">
+
+                            <h3 class="project-info-title">
+                                Key Techniques
+                            </h3>
+
+                            <ul class="project-list">
+
+                                <li>
+                                    Population table joining
+                                </li>
+
+                                <li>
+                                    Normalization
+                                </li>
+
+                                <li>
+                                    DEM processing & hillshade
+                                </li>
+
+                                <li>
+                                    Shaded Relief in Blender
+                                </li>
+
+                                <li>
+                                    Adobe CC for final layout
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =====================================
+                     SUPPORTING IMAGES
+                ====================================== -->
+
+                <div class="supporting-images">
+
+
+                    <!-- POPULATION MAP -->
+
+                    <div class="supporting-image">
+
+                        <img
+                            src="images/horses-kentucky-population.jpg"
+                            alt="Population Map">
+
+                        <div class="supporting-label">
+                            Population Map
+                        </div>
+
+                    </div>
+
+
+                    <!-- SHADED RELIEF -->
+
+                    <div class="supporting-image">
+
+                        <img
+                            src="images/horses-kentucky-relief.jpg"
+                            alt="Shaded Relief">
+
+                        <div class="supporting-label">
+                            Shaded Relief
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
     </main>
 
 
 </body>
 
 </html>
-```
