@@ -490,7 +490,7 @@
         .supporting-images {
             display: grid;
 
-            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
 
             gap: 25px;
 
@@ -519,6 +519,14 @@
             text-align: left;
 
             color: #444;
+        }
+
+        .project-two-supporting {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .project-three-supporting {
+            grid-template-columns: 1fr 1fr;
         }
 
 
@@ -596,7 +604,7 @@
             border-top: 1px solid #d8d8d5;
         }
 
-        
+
         .interactive-frame {
             width: 100%;
             border: 1px solid #cfcfcb;
@@ -669,38 +677,10 @@
             display: block;
         }
 
-.project-embed {
-            width: 100%;
-            background-color: #e8e8e5;
-            overflow: hidden;
-        }
-
-        .project-embed iframe {
-            display: block;
-            width: 100%;
-            height: 720px;
-            border: 0;
-        }
-
         .blank-supporting-image {
             width: 100%;
             aspect-ratio: 16 / 10;
             background-color: #e8e8e5;
-        }
-
-        .project-two-supporting {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 25px;
-            margin-top: 25px;
-        }
-
-        .project-two-supporting .supporting-image {
-            min-width: 0;
-        }
-
-        .project-two-supporting .supporting-image .project-embed iframe {
-            height: 420px;
         }
 
 
@@ -836,24 +816,19 @@
 
                 gap: 15px;
             }
-            .project-divider {
-                margin-top: 100px;
-                padding-top: 100px;
-            }
-
-            .project-embed iframe {
-                height: 55vh;
-                min-height: 400px;
-            }
 
             .project-two-supporting {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 15px;
             }
 
-            .project-two-supporting .supporting-image .project-embed iframe {
-                height: 55vh;
-                min-height: 350px;
+            .project-three-supporting {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .project-divider {
+                margin-top: 100px;
+                padding-top: 100px;
             }
 
         }
@@ -1378,8 +1353,8 @@
                     </h2>
 
                     <div class="project-subtitle">
-                    LiDAR | 3D Visualization | Web Development
-                </div>
+                        LiDAR | 3D Visualization | Web Development
+                    </div>
 
                     <div class="project-main">
 
@@ -1621,9 +1596,9 @@
         &lt;p class="caption"&gt;Mapping the location of the furnaces, &lt;a href="hi-res.pdf"&gt;download the hi-res version here!&lt;/a&gt;&lt;/p&gt;
         &lt;img src="cottage-area.jpg" alt="Something about this map" width="100%" /&gt;
         &lt;p class="caption"&gt;Mapping the area around the Cottage furnace, &lt;a href="cottage-area-hi-res.pdf"&gt;download the hi-res version here!&lt;/a&gt;&lt;/p&gt;
-        &lt;img src="fitchburg-area.jpg" alt="Something about this map" width="100%" /&gt;
+        &lt;img src="fitchburg-area.jpg" alt="Something about the map" width="100%" /&gt;
         &lt;p class="caption"&gt;Mapping the area around the Fitchburg furnace, &lt;a href="fitchburg-area-hi-res.pdf"&gt;download the hi-res version here!&lt;/a&gt;&lt;/p&gt;
-        &lt;img src="slate-area.jpg" alt="Something about this map" width="100%" /&gt;
+        &lt;img src="slate-area.jpg" alt="Something about the map" width="100%" /&gt;
         &lt;p class="caption"&gt;Mapping the area around the Slate furnace, &lt;a href="slate-area-hi-res.pdf"&gt;download the hi-res version here!&lt;/a&gt;&lt;/p&gt;
       &lt;/div&gt;
     &lt;/div&gt;
@@ -1639,7 +1614,7 @@
                             </div>
 
                             <!-- SUPPORTING IMAGES -->
-                            <div class="supporting-images">
+                            <div class="supporting-images project-two-supporting">
 
                                 <div class="supporting-image image-preview"
                                     style="--image: url('images/cottage.png');">
@@ -1822,53 +1797,204 @@
 
                             </div>
 
-                        <!-- DATA -->
 
-                        <div class="project-info-block">
+                            <!-- DATA -->
 
-                            <h3 class="project-info-title">
-                                Data
-                            </h3>
+                            <div class="project-info-block">
 
-                            <ul class="project-list">
+                                <h3 class="project-info-title">
+                                    Data
+                                </h3>
 
-                                <li>
-                                    KyFromAbove
-                                </li>
+                                <ul class="project-list">
 
-                            </ul>
+                                    <li>
+                                        KyFromAbove
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+
+
+                            <!-- KEY TECHNIQUES -->
+
+                            <div class="project-info-block">
+
+                                <h3 class="project-info-title">
+                                    Key Techniques
+                                </h3>
+
+                                <ul class="project-list">
+
+                                    <li>
+                                        HTML web development
+                                    </li>
+
+                                    <li>
+                                        3D scanning & LiDAR processing
+                                    </li>
+
+                                    <li>
+                                        Cesium ion & interactive visualization
+                                    </li>
+
+                                    <li>
+                                        DEM processing & hillshade
+                                    </li>
+
+                                </ul>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================================
+                     THIRD PROJECT
+                ====================================== -->
+
+                <div class="project-divider">
+
+                    <h2 class="project-title">
+                        ArcPy Automation
+                    </h2>
+
+                    <div class="project-subtitle">
+                        GIS Workflow | Automation
+                    </div>
+
+                    <div class="project-main">
+
+                        <!-- MAIN INTERACTIVE WORKFLOW -->
+                        <div class="project-visuals">
+
+                            <div class="interactive-frame">
+
+                                <div class="interactive-header">
+                                    <div class="interactive-tab active" style="cursor: default;">
+                                        Interactive ArcPy Workflow
+                                    </div>
+                                </div>
+
+                                <div class="interactive-view">
+                                    <div class="blank-supporting-image"
+                                         style="aspect-ratio: 16 / 9;">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- SUPPORTING IMAGES -->
+                            <div class="supporting-images project-three-supporting">
+
+                                <div class="supporting-image">
+                                    <div class="blank-supporting-image"></div>
+
+                                    <div class="supporting-label">
+                                        Before
+                                    </div>
+                                </div>
+
+                                <div class="supporting-image">
+                                    <div class="blank-supporting-image"></div>
+
+                                    <div class="supporting-label">
+                                        After
+                                    </div>
+                                </div>
+
+                            </div>
 
                         </div>
 
 
+                        <!-- PROJECT INFORMATION -->
+                        <div class="project-info">
 
-                        <!-- KEY TECHNIQUES -->
+                            <!-- OBJECTIVE -->
+                            <div class="project-info-block">
 
-                        <div class="project-info-block">
+                                <h3 class="project-info-title">
+                                    Objective
+                                </h3>
 
-                            <h3 class="project-info-title">
-                                Key Techniques
-                            </h3>
+                                <p>
+                                    Automate a GIS workflow to save time and reduce manual steps
+                                </p>
 
-                            <ul class="project-list">
+                            </div>
 
-                                <li>
-                                    HTML web development
-                                </li>
 
-                                <li>
-                                    3D scanning & LiDAR processing
-                                </li>
+                            <!-- MY ROLE -->
+                            <div class="project-info-block">
 
-                                <li>
-                                    Cesium ion & interactive visualization
-                                </li>
+                                <h3 class="project-info-title">
+                                    My Role
+                                </h3>
 
-                                <li>
-                                    DEM processing & hillshade
-                                </li>
+                                <p>
+                                    ArcPy scripting, geoprocessing, workflow design.
+                                </p>
 
-                            </ul>
+                            </div>
+
+
+                            <!-- WORKFLOW -->
+                            <div class="project-info-block">
+
+                                <h3 class="project-info-title">
+                                    Workflow
+                                </h3>
+
+                                <div class="workflow">
+
+                                    <div class="workflow-row">
+
+                                        <!-- ARCGIS PRO -->
+                                        <div class="workflow-item">
+
+                                            <div class="workflow-icon">
+                                                <img
+                                                    src="images/icons/arcgis.png"
+                                                    alt="ArcGIS Pro">
+                                            </div>
+
+                                            <div class="workflow-label">
+                                                ArcGIS Pro
+                                            </div>
+
+                                        </div>
+
+                                        <div class="workflow-arrow">
+                                            →
+                                        </div>
+
+                                        <!-- ARCPY / PYTHON -->
+                                        <div class="workflow-item">
+
+                                            <div class="workflow-icon">
+                                                <img
+                                                    src="images/icons/python.png"
+                                                    alt="ArcPy / Python">
+                                            </div>
+
+                                            <div class="workflow-label">
+                                                ArcPy / Python
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
 
                         </div>
 
@@ -1919,24 +2045,42 @@
 
 
     <script>
+
         document.querySelectorAll('.interactive-frame').forEach(function(frame) {
+
             const tabs = frame.querySelectorAll('.interactive-tab[data-view]');
             const panels = frame.querySelectorAll('[data-view-panel]');
 
             tabs.forEach(function(tab) {
+
                 tab.addEventListener('click', function() {
+
                     const view = tab.dataset.view;
 
                     tabs.forEach(function(item) {
-                        item.classList.toggle('active', item.dataset.view === view);
+
+                        item.classList.toggle(
+                            'active',
+                            item.dataset.view === view
+                        );
+
                     });
 
                     panels.forEach(function(panel) {
-                        panel.style.display = panel.dataset.viewPanel === view ? 'block' : 'none';
+
+                        panel.style.display =
+                            panel.dataset.viewPanel === view
+                                ? 'block'
+                                : 'none';
+
                     });
+
                 });
+
             });
+
         });
+
     </script>
 
 </body>
